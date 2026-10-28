@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscrição nos jogos escolares</title>
+</head>
+<body>
+    <header>
+        <h1>Inscrição nos jogos escolares</h1>
+        <p>Formulário demonstrativo. Utilize somente informações fictícias.</p>
+        <p>Campos identificados como obrigatórios devem ser preenchidos.</p>
+    </header>
+    <main>
+        <form id="inscricao-jogos" action="/inscricoes-jogos" method="post" enctype="multipart/form-data">
+            
+            <input type="hidden" name="edicao" value="jogos-2026">
+
+            <fieldset>
+                <legend>1. Identificação do atleta</legend>
+                
+                <label for="nome-atleta">Nome completo do atleta (obrigatório):</label><br>
+                <input type="text" id="nome-atleta" name="nome_atleta" required><br><br>
+
+                <label for="nome-social">Nome social:</label><br>
+                <input type="text" id="nome-social" name="nome_social"><br><br>
+
+                <label for="matricula">Matrícula (obrigatória):</label><br>
+                <input type="text" id="matricula" name="matricula" required><br><br>
+
+                <label for="nascimento">Data de nascimento:</label><br>
+                <input type="date" id="nascimento" name="nascimento"><br><br>
+
+                <label for="email-atleta">E-mail de contato (obrigatório):</label><br>
+                <input type="email" id="email-atleta" name="email_atleta" required><br><br>
+
+                <label for="telefone-atleta">Telefone:</label><br>
+                <input type="tel" id="telefone-atleta" name="telefone_atleta"><br><br>
+
+                <label for="site-escola">Site da escola:</label><br>
+                <input type="url" id="site-escola" name="site_escola">
+            </fieldset>
+
+            <fieldset>
+                <legend>Escola e delegação</legend>
+
+                <label for="escola">Escola (com sugestões)</label><br>
+                <input type="search" id="escola" name="escola" list="escolas">
+                <datalist id="escolas">
+                    <option value="Campus Cedro"></option>
+                    <option value="Campus Iguatu"></option>
+                    <option value="Campus Juazeiro"></option>
+                    <option value="Campus Quixada"></option>
+                    <option value="Campus Fortaleza"></option>
+                </datalist><br><br>
+
+            </fieldset>
+
+        </form>
+    </main>
+</body>
+</html>
